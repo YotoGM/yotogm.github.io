@@ -117,29 +117,96 @@
             margin-bottom: 20px;
             letter-spacing: 1px;
         }
+  <style>
+        /* ... (mantén tu configuración de body y card igual) ... */
+
+        /* BOTÓN KICK - ESTILO PIXEL ART REAL */
+        .btn-kick {
+            background: #000 !important;
+            border: 1px solid #53fc18 !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            height: 60px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        /* EL CÍRCULO PIXELADO (Construido con sombras de bloque) */
+        .k-pixel-logo {
+            width: 24px;
+            height: 24px;
+            background: #53fc18;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px;
+            /* Este truco quita las esquinas pixel por pixel para hacerlo redondo */
+            box-shadow: 
+                -4px 0 0 -2px #000, 4px 0 0 -2px #000, 
+                0 -4px 0 -2px #000, 0 4px 0 -2px #000,
+                -4px -4px 0 -2px #000, 4px -4px 0 -2px #000,
+                -4px 4px 0 -2px #000, 4px 4px 0 -2px #000;
+        }
+
+        /* El texto KICK con fuente pixelada */
+        .kick-text {
+            color: #53fc18;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn-kick:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(83, 252, 24, 0.4);
+        }
+
+        /* Estilos para Facebook y TikTok (mantén los que ya tenías) */
+        .btn-facebook {
+            background: #1877F2;
+            border-radius: 12px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-tiktok {
+            background: #000;
+            border: 1px solid #fe2c55;
+            border-radius: 12px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: -2px -2px 0px #25f4ee, 2px 2px 0px #fe2c55;
+        }
     </style>
-</head>
-<body>
 
-    <div class="card">
-        <div class="status">● ONLINE</div>
-        
-        <img src="https://raw.githubusercontent.com/Jocthan-ML/Mi-p-gina-de-stream/main/Yoto%20Logo.png" alt="Yoto GM Logo" class="logo-img">
-        
-        <div class="descripcion">Streamer Gamer / Content Creator</div>
+    <a href="https://kick.com/jocthanM" target="_blank" class="btn-kick">
+        <div class="k-pixel-logo">K</div>
+        <span class="kick-text">KICK</span>
+    </a>
 
-        <a href="https://kick.com/jocthanM" target="_blank" class="boton btn-kick">
-            <img src="https://i.ibb.co/L8zP8G5/Kick-Logo-Fixed.png" alt="Kick Logo" class="kick-logo">
-        </a>
+    <a href="https://www.facebook.com/profile.php?id=100092795311838" target="_blank" class="btn-facebook">
+        <i class="fa-brands fa-facebook"></i> FACEBOOK
+    </a>
 
-        <a href="https://www.facebook.com/profile.php?id=100092795311838" target="_blank" class="boton btn-facebook">
-            <i class="fa-brands fa-facebook"></i> FACEBOOK
-        </a>
-
-        <a href="https://www.tiktok.com/@yoto.gm" target="_blank" class="boton btn-tiktok">
-            <i class="fa-brands fa-tiktok"></i> TIKTOK
-        </a>
-    </div>
-
-</body>
-</html>
+    <a href="https://www.tiktok.com/@yoto.gm" target="_blank" class="btn-tiktok">
+        <i class="fa-brands fa-tiktok"></i> TIKTOK
+    </a>
