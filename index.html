@@ -1,23 +1,23 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jocthan GP | Hub Digital</title>
+    <title>Yoto[G.M] | Hub Digital</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --fondo: #050505;
-            --morado-vivo: #bc13fe;
+            --morado-vivo: #bc13fe; /* Un morado mucho más brillante */
             --verde-neon: #39FF14;
-            --cristal: rgba(255, 255, 255, 0.03);
+            --cristal: rgba(255, 255, 255, 0.05);
         }
 
         body {
             background-color: var(--fondo);
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(57, 255, 20, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(188, 19, 254, 0.1) 0%, transparent 40%);
+                radial-gradient(circle at 20% 30%, rgba(188, 19, 254, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(57, 255, 20, 0.1) 0%, transparent 40%);
             color: white;
             font-family: 'Rajdhani', sans-serif;
             display: flex;
@@ -25,38 +25,38 @@
             justify-content: center;
             min-height: 100vh;
             margin: 0;
+            overflow: hidden;
         }
 
         .card {
             background: var(--cristal);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(57, 255, 20, 0.2); /* Borde principal ahora verde sutil */
+            backdrop-filter: blur(15px); /* Efecto de vidrio esmerilado */
+            border: 1px solid rgba(188, 19, 254, 0.3);
             border-radius: 24px;
             padding: 50px 40px;
             width: 90%;
             max-width: 400px;
             text-align: center;
-            box-shadow: 0 0 30px rgba(57, 255, 20, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             position: relative;
         }
 
-        /* Detalle de esquina invertido: Ahora es MORADO */
+        /* Detalle decorativo de esquina */
         .card::before {
             content: "";
             position: absolute;
             top: -2px; left: -2px;
-            width: 60px; height: 60px;
-            border-top: 3px solid var(--morado-vivo);
-            border-left: 3px solid var(--morado-vivo);
+            width: 50px; height: 50px;
+            border-top: 3px solid var(--verde-neon);
+            border-left: 3px solid var(--verde-neon);
             border-radius: 24px 0 0 0;
-            filter: drop-shadow(0 0 5px var(--morado-vivo));
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.2rem;
             color: white;
-            text-shadow: 0 0 15px var(--verde-neon); /* Título ahora brilla en verde */
+            text-shadow: 0 0 10px var(--morado-vivo);
             margin-bottom: 5px;
             letter-spacing: 3px;
         }
@@ -88,32 +88,27 @@
         }
 
         .boton {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px; /* Espacio para el icono */
+            display: block;
             margin: 15px 0;
             padding: 16px;
-            background: rgba(255, 255, 255, 0.05);
+            background: linear-gradient(45deg, rgba(188, 19, 254, 0.1), transparent);
             color: white;
             text-decoration: none;
-            border: 1px solid rgba(57, 255, 20, 0.3);
+            border: 1px solid rgba(188, 19, 254, 0.5);
             border-radius: 12px;
             font-weight: 700;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-        }
-
-        .boton i {
-            font-size: 1.3rem;
+            position: relative;
+            overflow: hidden;
         }
 
         .boton:hover {
-            border-color: var(--morado-vivo);
-            background: rgba(188, 19, 254, 0.1);
+            border-color: var(--verde-neon);
+            background: rgba(57, 255, 20, 0.05);
             box-shadow: 0 0 20px rgba(188, 19, 254, 0.4);
-            transform: translateY(-3px);
-            color: var(--morado-vivo);
+            transform: scale(1.03);
+            color: var(--verde-neon);
         }
 
         .footer-text {
@@ -129,13 +124,13 @@
         <div class="status">
             <div class="punto-vivo"></div> SISTEMA ACTIVO
         </div>
-        <h1>JOCTHAN GP</h1>
+        <h1>Yoto[G.M]</h1>
         <p style="color: #aaa; margin-bottom: 30px;">Digital Creator & Content Hub</p>
         
         <a href="https://kick.com/jocthanM" class="boton">
             <i class="fa-solid fa-play"></i> KICK LIVE
         </a>
-        <a href="TU_LINK_DE_FACEBOOK" class="boton">
+        <a href="https://www.facebook.com/profile.php?id=100092795311838" class="boton">
             <i class="fa-brands fa-facebook"></i> FACEBOOK
         </a>
         <a href="https://www.tiktok.com/@yoto.gm" class="boton">
