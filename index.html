@@ -3,196 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoto [G.M] | Hub Oficial</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <title>Yoto[G.M] | Hub Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
         :root {
-            --primary-neon: #00ff41; /* Verde Matrix/Neon */
-            --secondary-neon: #bc13fe; /* Morado Neon */
-            --yt-red: #ff0000; /* Rojo YouTube */
-            --bg-dark: #0a0a0a;
+            --fondo: #050505;
+            --morado: #bc13fe;
+            --verde: #39FF14;
+            --kick-verde: #53fc18;
+            --youtube-rojo: #FF0000;
+        }
+
+        /* ANIMACIÓN DE PULSACIÓN PARA EL ESTADO ONLINE */
+        @keyframes pulse {
+            0% { opacity: 1; text-shadow: 0 0 8px var(--verde); }
+            50% { opacity: 0.4; text-shadow: 0 0 0px var(--verde); }
+            100% { opacity: 1; text-shadow: 0 0 8px var(--verde); }
         }
 
         body {
-            background-color: var(--bg-dark);
+            background-color: var(--fondo);
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(188, 19, 254, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(57, 255, 20, 0.1) 0%, transparent 40%);
             color: white;
             font-family: 'Rajdhani', sans-serif;
-            margin: 0;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             min-height: 100vh;
-            overflow-x: hidden;
+            margin: 0;
+            position: relative;
         }
 
-        /* Contador de Visitas */
-        .visit-counter {
+        .page-counter {
             position: fixed;
             top: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            border: 1px solid var(--primary-neon);
-            padding: 10px 15px;
-            border-radius: 5px;
+            right: 25px;
             font-family: 'Orbitron', sans-serif;
-            font-size: 0.9rem;
-            color: var(--primary-neon);
-            box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
         }
 
-        .container {
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
+        .page-counter i { color: var(--morado); }
+        .page-counter span { color: var(--verde); font-weight: bold; }
+
+        .card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 40px 20px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(188, 19, 254, 0.4);
+            border-radius: 24px;
+            padding: 40px 30px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8);
         }
 
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid var(--secondary-neon);
-            box-shadow: 0 0 20px var(--secondary-neon);
-            margin-bottom: 20px;
+        .logo-img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 10px var(--morado));
         }
 
-        h1 {
+        .descripcion {
             font-family: 'Orbitron', sans-serif;
-            margin: 10px 0;
+            color: var(--verde);
+            font-size: 0.8rem;
+            text-transform: uppercase;
             letter-spacing: 2px;
-            color: #fff;
+            margin-bottom: 25px;
         }
 
         .status {
+            color: var(--verde);
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite ease-in-out;
+            font-weight: bold;
+        }
+
+        .boton {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            font-size: 0.9rem;
-            color: var(--primary-neon);
-            margin-bottom: 30px;
-        }
-
-        .pulse {
-            width: 8px;
-            height: 8px;
-            background: var(--primary-neon);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--primary-neon);
-            animation: pulse-animation 2s infinite;
-        }
-
-        @keyframes pulse-animation {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 65, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 255, 65, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 65, 0); }
-        }
-
-        /* Botones Generales */
-        .btn-link {
-            display: block;
-            text-decoration: none;
+            gap: 15px;
+            margin: 15px 0;
+            padding: 16px;
             color: white;
-            background: rgba(255, 255, 255, 0.03);
-            margin-bottom: 15px;
-            padding: 15px;
+            text-decoration: none;
             border-radius: 12px;
             font-weight: 700;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            height: 60px;
+            box-sizing: border-box;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        .btn-content {
+        /* ESTILO KICK */
+        .k-pixel-logo {
+            width: 24px;
+            height: 24px;
+            background: var(--kick-verde);
+            color: #000;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            position: relative;
+            box-shadow: 
+                0 -4px 0 -2px var(--fondo), 0 4px 0 -2px var(--fondo),
+                -4px 0 0 -2px var(--fondo), 4px 0 0 -2px var(--fondo);
+            flex-shrink: 0;
         }
+        .btn-kick { background: #000; border: 1px solid var(--kick-verde); }
+        .kick-text { color: var(--kick-verde); font-family: 'Press Start 2P', cursive; font-size: 13px; margin-top: 3px; }
+        .btn-kick:hover { transform: scale(1.05); box-shadow: 0 0 15px var(--kick-verde); }
 
-        .btn-icon {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
+        /* ESTILO YOUTUBE */
+        .btn-youtube {
+            background: #000;
+            border: 1px solid var(--youtube-rojo);
+            color: white;
         }
+        .btn-youtube i { color: var(--youtube-rojo); font-size: 1.4rem; }
+        .btn-youtube:hover { transform: scale(1.05); box-shadow: 0 0 15px var(--youtube-rojo); }
 
-        /* Estilos Específicos */
-        .kick-btn { border: 2px solid var(--primary-neon); }
-        .kick-btn:hover { background: var(--primary-neon); color: black; box-shadow: 0 0 25px var(--primary-neon); }
+        /* ESTILO FACEBOOK */
+        .btn-facebook { background: #1877F2; border: none; }
+        .btn-facebook:hover { transform: scale(1.05); box-shadow: 0 0 15px #1877F2; }
 
-        .youtube-btn { border: 2px solid var(--yt-red); }
-        .youtube-btn:hover { background: var(--yt-red); box-shadow: 0 0 25px var(--yt-red); transform: translateY(-3px); }
+        /* ESTILO TIKTOK */
+        .btn-tiktok {
+            background: #000;
+            border: 1px solid #fe2c55;
+            box-shadow: -2px -2px 0px #25f4ee, 2px 2px 0px #fe2c55;
+        }
+        .btn-tiktok:hover { transform: scale(1.05); }
 
-        .tiktok-btn { border: 2px solid #00f2ea; }
-        .tiktok-btn:hover { background: #00f2ea; color: black; box-shadow: 0 0 25px #00f2ea; }
-
-        footer {
-            margin-top: 30px;
-            font-size: 0.8rem;
-            opacity: 0.6;
-            letter-spacing: 1px;
+        .rights-text {
+            margin-top: 30px; 
+            font-size: 0.7rem; 
+            color: rgba(255,255,255,0.4); 
+            font-family: 'Orbitron', sans-serif; 
+            letter-spacing: 1px; 
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-    <div class="visit-counter">
-        VISITAS: <span id="count">0000</span>
+    <div class="page-counter">
+        <i class="fa-solid fa-eye"></i>
+        <span id="count">0000</span>
     </div>
 
-    <div class="container">
-        <img src="https://github.com/YotoGM.png" alt="Yoto [G.M]" class="profile-img">
+    <div class="card">
+        <div class="status">● ONLINE</div>
         
-        <h1>YOTO [G.M]</h1>
-        <div class="status">
-            <div class="pulse"></div>
-            <span>● ONLINE</span>
-        </div>
+        <img src="https://raw.githubusercontent.com/Jocthan-ML/Mi-p-gina-de-stream/main/Yoto%20Logo.png" alt="Yoto GM Logo" class="logo-img">
+        
+        <div class="descripcion">Streamer Gamer / Content Creator</div>
 
-        <a href="https://kick.com/yotogm" target="_blank" class="btn-link kick-btn">
-            <div class="btn-content">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Kick_logo.svg" alt="Kick" class="btn-icon">
-                <span>KICK LIVE</span>
-            </div>
+        <a href="https://kick.com/jocthanM" target="_blank" class="boton btn-kick">
+            <div class="k-pixel-logo">K</div>
+            <span class="kick-text">KICK</span>
         </a>
 
-        <a href="https://www.youtube.com/@YotoGM" target="_blank" class="btn-link youtube-btn">
-            <div class="btn-content">
-                <img src="https://www.youtube.com/@YotoG.M" alt="YouTube" class="btn-icon">
-                <span>YOUTUBE</span>
-            </div>
+        <a href="https://www.youtube.com/@YotoGM" target="_blank" class="boton btn-youtube">
+            <i class="fa-brands fa-youtube"></i> YOUTUBE
         </a>
 
-        <a href="https://www.tiktok.com/@yotogm" target="_blank" class="btn-link tiktok-btn">
-            <div class="btn-content">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Ionicons_logo-tiktok.svg" alt="TikTok" class="btn-icon">
-                <span>TIKTOK</span>
-            </div>
+        <a href="https://www.facebook.com/profile.php?id=100092795311838" target="_blank" class="boton btn-facebook">
+            <i class="fa-brands fa-facebook"></i> FACEBOOK
         </a>
 
-        <footer>
+        <a href="https://www.tiktok.com/@yoto.gm" target="_blank" class="boton btn-tiktok">
+            <i class="fa-brands fa-tiktok"></i> TIKTOK
+        </a>
+
+        <p class="rights-text">
             © 2026 JOCTHAN M. | TODOS LOS DERECHOS RESERVADOS
-        </footer>
+        </p>
     </div>
 
     <script>
-        // Lógica del contador de visitas (CountAPI)
-        async function updateCounter() {
-            try {
-                // Reemplaza 'yotogm-hub' con un nombre único para tu página
-                const response = await fetch('https://api.countapi.xyz/hit/yotogm.github.io/visits');
-                const data = await response.json();
-                document.getElementById('count').innerText = data.value.toString().padStart(4, '0');
-            } catch (error) {
-                console.log("Error al cargar el contador");
-            }
+        function cb(response) {
+            document.getElementById('count').innerText = response.value.toString().padStart(4, '0');
         }
-        updateCounter();
     </script>
+    <script async src="https://api.countapi.xyz/hit/jocthan-gp-final-v3/visits?callback=cb"></script>
 </body>
 </html>
