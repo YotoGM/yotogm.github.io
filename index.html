@@ -44,6 +44,26 @@
             position: relative;
         }
 
+        /* Estilo para tu imagen de Logo */
+        .logo-img {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 15px var(--morado-vivo));
+        }
+
+        /* Estilo para la nueva descripción */
+        .descripcion {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--verde-neon);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+        }
+
         .card::before {
             content: "";
             position: absolute;
@@ -54,21 +74,12 @@
             border-radius: 24px 0 0 0;
         }
 
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            color: white;
-            text-shadow: 0 0 10px var(--morado-vivo);
-            margin-bottom: 5px;
-            letter-spacing: 3px;
-        }
-
         .status {
             color: var(--verde-neon);
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -110,42 +121,3 @@
 
         .boton:hover {
             border-color: var(--verde-neon);
-            background: rgba(57, 255, 20, 0.05);
-            box-shadow: 0 0 20px rgba(188, 19, 254, 0.4);
-            transform: scale(1.03);
-            color: var(--verde-neon);
-        }
-
-        .footer-text {
-            margin-top: 30px;
-            font-size: 0.8rem;
-            opacity: 0.5;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="card">
-        <div class="status">
-            <div class="punto-vivo"></div> SISTEMA ACTIVO
-        </div>
-        <h1>Yoto[G.M]</h1>
-        <p style="color: #aaa; margin-bottom: 30px;">Digital Creator & Content Hub</p>
-        
-        <a href="https://kick.com/jocthanM" target="_blank" class="boton">
-            <i class="fa-solid fa-play"></i> KICK LIVE
-        </a>
-
-        <a href="https://www.facebook.com/profile.php?id=100092795311838" target="_blank" class="boton">
-            <i class="fa-brands fa-facebook"></i> FACEBOOK
-        </a>
-
-        <a href="https://www.tiktok.com/@yoto.gm" target="_blank" class="boton">
-            <i class="fa-brands fa-tiktok"></i> TIKTOK
-        </a>
-        
-        <p class="footer-text">© 2026 Powered by Yoto [G.M]</p>
-    </div>
-
-</body>
-</html>
