@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Hub | Jocthan GP</title>
+    <style>
+        /* CONFIGURACIÓN DE COLORES GAMER */
+        :root {
+            --fondo: #0a0a0a;
+            --morado: #8A2BE2;
+            --verde: #39FF14;
+            --blanco: #ffffff;
+        }
+
+        body {
+            background-color: var(--fondo);
+            color: var(--blanco);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .contenedor {
+            border: 2px solid var(--verde);
+            border-radius: 20px;
+            padding: 40px;
+            background: rgba(138, 43, 226, 0.05); /* Toque morado sutil */
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--morado);
+            text-shadow: 0 0 15px var(--verde);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        .boton {
+            display: block;
+            width: 100%;
+            margin: 15px 0;
+            padding: 15px;
+            background-color: transparent;
+            color: var(--verde);
+            border: 2px solid var(--verde);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            box-sizing: border-box;
+        }
+
+        .boton:hover {
+            background-color: var(--morado);
+            color: white;
+            border-color: var(--morado);
+            box-shadow: 0 0 25px var(--morado);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>STREAM HUB</h1>
+        <p>CONECTA CON EL DIRECTO</p>
+        
+        <a href="#" class="boton">Kick Live</a>
+        <a href="#" class="boton">Facebook Gaming</a>
+        <a href="#" class="boton">TikTok Live</a>
+    </div>
+
+</body>
+</html>
