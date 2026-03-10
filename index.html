@@ -89,4 +89,103 @@
             gap: 15px;
             margin: 15px 0;
             padding: 16px;
-            color:
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            height: 60px;
+            box-sizing: border-box;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .k-pixel-logo {
+            width: 24px;
+            height: 24px;
+            background: var(--kick-verde);
+            color: #000;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 
+                0 -4px 0 -2px var(--fondo), 0 4px 0 -2px var(--fondo),
+                -4px 0 0 -2px var(--fondo), 4px 0 0 -2px var(--fondo),
+                -4px -4px 0 -2px var(--fondo), 4px -4px 0 -2px var(--fondo),
+                -4px 4px 0 -2px var(--fondo), 4px 4px 0 -2px var(--fondo);
+            flex-shrink: 0;
+        }
+
+        .btn-kick { background: #000; border: 1px solid var(--kick-verde); }
+        .kick-text { color: var(--kick-verde); font-family: 'Press Start 2P', cursive; font-size: 13px; margin-top: 3px; }
+
+        .btn-facebook { background: #1877F2; }
+        .btn-tiktok {
+            background: #000;
+            border: 1px solid #fe2c55;
+            box-shadow: -2px -2px 0px #25f4ee, 2px 2px 0px #fe2c55;
+        }
+
+        .btn-kick:hover { transform: scale(1.05); box-shadow: 0 0 15px var(--kick-verde); }
+
+        /* --- FOOTER PROFESIONAL --- */
+        .footer-rights {
+            margin-top: 30px;
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.4);
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="vistas-hud">
+            <i class="fa-solid fa-eye"></i>
+            VIEWS: <span id="count">0000</span>
+        </div>
+
+        <div class="status">● ONLINE</div>
+        
+        <img src="https://raw.githubusercontent.com/Jocthan-ML/Mi-p-gina-de-stream/main/Yoto%20Logo.png" alt="Yoto GM Logo" class="logo-img">
+        
+        <div class="descripcion">Streamer Gamer / Content Creator</div>
+
+        <a href="https://kick.com/jocthanM" target="_blank" class="boton btn-kick">
+            <div class="k-pixel-logo">K</div>
+            <span class="kick-text">KICK</span>
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=100092795311838" target="_blank" class="boton btn-facebook">
+            <i class="fa-brands fa-facebook"></i> FACEBOOK
+        </a>
+
+        <a href="https://www.tiktok.com/@yoto.gm" target="_blank" class="boton btn-tiktok">
+            <i class="fa-brands fa-tiktok"></i> TIKTOK
+        </a>
+
+        <div class="footer-rights">
+            <i class="fa-solid fa-circle-check" style="color: var(--verde);"></i>
+            © 2026 JOCTHAN M. | DERECHOS RESERVADOS
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+    </div>
+
+    <script>
+        function cb(response) {
+            document.getElementById('count').innerText = response.value.toString().padStart(4, '0');
+        }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/yoto-gm-hub-unique-id/visits?callback=cb"></script>
+
+</body>
+</html>
