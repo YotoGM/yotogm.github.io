@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoto[G.M] | Hub Digital</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
@@ -12,7 +12,7 @@
             --fondo: #050505;
             --morado: #bc13fe;
             --verde: #39FF14;
-            --kick-verde: #53fc18;
+            --kick-verde: #53fc18; /* El verde exacto de Kick */
         }
 
         body {
@@ -29,6 +29,7 @@
             margin: 0;
         }
 
+        /* TARJETA PRINCIPAL */
         .card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(15px);
@@ -74,43 +75,24 @@
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             text-transform: uppercase;
             border: 1px solid rgba(255,255,255,0.1);
-            height: 60px;
+            height: 60px; /* Altura uniforme para todos */
             box-sizing: border-box;
         }
 
-        /* BOTÓN KICK PERSONALIZADO */
+        /* --- BOTÓN KICK PERSONALIZADO --- */
         .btn-kick {
             background: #000;
             border: 1px solid var(--kick-verde);
             box-shadow: 0 0 10px rgba(83, 252, 24, 0.2);
+            /* Importante: para que el logo se vea nítido */
+            image-rendering: pixelated; 
         }
 
-        /* LOGO 'K' CIRCULAR PIXELADO */
-        .k-pixel-box {
-            background-color: var(--kick-verde);
-            color: #000;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 12px;
-            width: 28px;
-            height: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* Efecto pixelado redondo (esquinas cortadas) */
-            clip-path: polygon(
-                20% 0%, 80% 0%, 100% 20%, 100% 80%, 
-                80% 100%, 20% 100%, 0% 80%, 0% 20%
-            );
-            line-height: 0;
-            flex-shrink: 0;
-        }
-
-        .text-kick {
-            color: var(--kick-verde);
-            font-family: 'Press Start 2P', cursive;
-            font-size: 14px;
-            letter-spacing: 2px;
-            margin-top: 4px; /* Alineación visual con el logo */
+        /* El logo completo de la imagen (Círculo pixelado con la K) */
+        .kick-logo {
+            height: 35px; /* Altura del logo dentro del botón */
+            width: auto;
+            display: block;
         }
 
         .btn-kick:hover {
@@ -118,6 +100,7 @@
             box-shadow: 0 0 20px rgba(83, 252, 24, 0.4);
         }
 
+        /* --- OTROS BOTONES --- */
         .btn-facebook {
             background: #1877F2;
         }
@@ -146,8 +129,7 @@
         <div class="descripcion">Streamer Gamer / Content Creator</div>
 
         <a href="https://kick.com/jocthanM" target="_blank" class="boton btn-kick">
-            <div class="k-pixel-box">K</div>
-            <span class="text-kick">KICK</span>
+            <img src="https://i.ibb.co/L8zP8G5/Kick-Logo-Fixed.png" alt="Kick Logo" class="kick-logo">
         </a>
 
         <a href="https://www.facebook.com/profile.php?id=100092795311838" target="_blank" class="boton btn-facebook">
