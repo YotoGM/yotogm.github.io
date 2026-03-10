@@ -3,88 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stream Hub | Yoto[G.M]</title>
+    <title>Jocthan GP | Hub Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        /* CONFIGURACIÓN DE COLORES GAMER */
         :root {
-            --fondo: #0a0a0a;
-            --morado: #8A2BE2;
-            --verde: #39FF14;
-            --blanco: #ffffff;
+            --fondo: #050505;
+            --morado-vivo: #bc13fe; /* Un morado mucho más brillante */
+            --verde-neon: #39FF14;
+            --cristal: rgba(255, 255, 255, 0.05);
         }
 
         body {
             background-color: var(--fondo);
-            color: var(--blanco);
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(188, 19, 254, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(57, 255, 20, 0.1) 0%, transparent 40%);
+            color: white;
+            font-family: 'Rajdhani', sans-serif;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
             margin: 0;
-            padding: 20px;
+            overflow: hidden;
         }
 
-        .contenedor {
-            border: 2px solid var(--verde);
-            border-radius: 20px;
-            padding: 40px;
-            background: rgba(138, 43, 226, 0.05); /* Toque morado sutil */
-            box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
-            max-width: 450px;
-            width: 100%;
+        .card {
+            background: var(--cristal);
+            backdrop-filter: blur(15px); /* Efecto de vidrio esmerilado */
+            border: 1px solid rgba(188, 19, 254, 0.3);
+            border-radius: 24px;
+            padding: 50px 40px;
+            width: 90%;
+            max-width: 400px;
             text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        /* Detalle decorativo de esquina */
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -2px; left: -2px;
+            width: 50px; height: 50px;
+            border-top: 3px solid var(--verde-neon);
+            border-left: 3px solid var(--verde-neon);
+            border-radius: 24px 0 0 0;
         }
 
         h1 {
-            color: var(--morado);
-            text-shadow: 0 0 15px var(--verde);
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            color: white;
+            text-shadow: 0 0 10px var(--morado-vivo);
+            margin-bottom: 5px;
+            letter-spacing: 3px;
         }
 
-        p {
-            color: #cccccc;
+        .status {
+            color: var(--verde-neon);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .punto-vivo {
+            width: 8px; height: 8px;
+            background-color: var(--verde-neon);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--verde-neon);
+            animation: pulso 1.5s infinite;
+        }
+
+        @keyframes pulso {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
         }
 
         .boton {
             display: block;
-            width: 100%;
             margin: 15px 0;
-            padding: 15px;
-            background-color: transparent;
-            color: var(--verde);
-            border: 2px solid var(--verde);
-            border-radius: 8px;
+            padding: 16px;
+            background: linear-gradient(45deg, rgba(188, 19, 254, 0.1), transparent);
+            color: white;
             text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: all 0.4s ease;
-            box-sizing: border-box;
+            border: 1px solid rgba(188, 19, 254, 0.5);
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .boton:hover {
-            background-color: var(--morado);
-            color: white;
-            border-color: var(--verde);
-            box-shadow: 0 0 20px var(--verde), 0 0 40px var(--morado);
-            transform: translateY(-3px); /* El botón sube un poquito al tocarlo */
+            border-color: var(--verde-neon);
+            background: rgba(57, 255, 20, 0.05);
+            box-shadow: 0 0 20px rgba(188, 19, 254, 0.4);
+            transform: scale(1.03);
+            color: var(--verde-neon);
+        }
+
+        .footer-text {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            opacity: 0.5;
         }
     </style>
 </head>
 <body>
 
-    <div class="contenedor">
-        <h1>STREAM HUB</h1>
-        <p>CONECTA CON EL DIRECTO</p>
+    <div class="card">
+        <div class="status">
+            <div class="punto-vivo"></div> En línea ahora
+        </div>
+        <h1>JOCTHAN GP</h1>
+        <p style="color: #aaa; margin-bottom: 30px;">Digital Creator & Content Hub</p>
         
-        <a href="https://kick.com/jocthanM" class="boton">¡Mírame en Kick!</a>
-        <a href="#" class="boton">Facebook Gaming</a>
-        <a href="https://www.tiktok.com/@yoto.gm" class="boton">TikTok Live</a>
+        <a href="#" class="boton">KICK CHANNEL</a>
+        <a href="#" class="boton">FACEBOOK GAMING</a>
+        <a href="#" class="boton">TIKTOK LIVE</a>
+        
+        <p class="footer-text">© 2026 Powered by Yoto [G.M]</p>
     </div>
 
 </body>
