@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoto[G.M] | Hub Digital</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     <style>
         :root {
             --fondo: #050505;
@@ -36,12 +34,30 @@
             backdrop-filter: blur(15px);
             border: 1px solid rgba(188, 19, 254, 0.3);
             border-radius: 24px;
-            padding: 50px 40px;
+            padding: 40px;
             width: 90%;
             max-width: 400px;
             text-align: center;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             position: relative;
+        }
+
+        /* Tu Logo */
+        .logo-img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 10px var(--morado-vivo));
+        }
+
+        .descripcion {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--verde-neon);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
         }
 
         .card::before {
@@ -54,29 +70,21 @@
             border-radius: 24px 0 0 0;
         }
 
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            color: white;
-            text-shadow: 0 0 10px var(--morado-vivo);
-            margin-bottom: 5px;
-            letter-spacing: 3px;
-        }
-
         .status {
             color: var(--verde-neon);
-            font-size: 0.9rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
+            opacity: 0.8;
         }
 
         .punto-vivo {
-            width: 8px; height: 8px;
+            width: 6px; height: 6px;
             background-color: var(--verde-neon);
             border-radius: 50%;
             box-shadow: 0 0 10px var(--verde-neon);
@@ -84,33 +92,29 @@
         }
 
         @keyframes pulso {
-            0% { opacity: 1; }
-            50% { opacity: 0.3; }
-            100% { opacity: 1; }
+            0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; }
         }
 
         .boton {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             margin: 15px 0;
             padding: 16px;
             background: linear-gradient(45deg, rgba(188, 19, 254, 0.1), transparent);
             color: white;
             text-decoration: none;
-            border: 1px solid rgba(188, 19, 254, 0.5);
+            border: 1px solid rgba(188, 19, 254, 0.4);
             border-radius: 12px;
             font-weight: 700;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
         }
 
         .boton:hover {
             border-color: var(--verde-neon);
-            background: rgba(57, 255, 20, 0.05);
+            background: rgba(57, 255, 20, 0.08);
             box-shadow: 0 0 20px rgba(188, 19, 254, 0.4);
             transform: scale(1.03);
             color: var(--verde-neon);
@@ -118,8 +122,8 @@
 
         .footer-text {
             margin-top: 30px;
-            font-size: 0.8rem;
-            opacity: 0.5;
+            font-size: 0.7rem;
+            opacity: 0.4;
         }
     </style>
 </head>
@@ -129,11 +133,13 @@
         <div class="status">
             <div class="punto-vivo"></div> SISTEMA ACTIVO
         </div>
-        <h1>Yoto[G.M]</h1>
-        <p style="color: #aaa; margin-bottom: 30px;">Digital Creator & Content Hub</p>
+        
+        <img src="logo.jpg" alt="Yoto GM Logo" class="logo-img">
+        
+        <div class="descripcion">Streamer Gamer / Content Creator</div>
         
         <a href="https://kick.com/jocthanM" target="_blank" class="boton">
-            <i class="fa-solid fa-play"></i> KICK LIVE
+            <i class="fa-solid fa-k"></i> KICK
         </a>
 
         <a href="https://www.facebook.com/profile.php?id=100092795311838" target="_blank" class="boton">
