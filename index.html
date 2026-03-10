@@ -77,4 +77,87 @@
             border-radius: 12px;
             font-weight: 700;
             font-size: 1.1rem;
-            transition: all 0.3s cubic-bezier(0.175, 0.
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-transform: uppercase;
+            border: 1px solid rgba(255,255,255,0.1);
+            height: 60px;
+            box-sizing: border-box;
+        }
+
+        /* --- BOTÓN KICK ESTILO IMAGEN --- */
+        .btn-kick {
+            background: #000;
+            border: 1px solid var(--kick-verde);
+            box-shadow: 0 0 10px rgba(83, 252, 24, 0.2);
+        }
+
+        /* EL CÍRCULO REDONDO PIXELADO (Construcción por bloques) */
+        .k-pixel-logo {
+            width: 28px;
+            height: 28px;
+            background: var(--kick-verde);
+            color: #000;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Esta forma crea el círculo de píxeles exacto de la imagen */
+            clip-path: polygon(
+                25% 0%, 75% 0%, 100% 25%, 100% 75%, 
+                75% 100%, 25% 100%, 0% 75%, 0% 25%
+            );
+            flex-shrink: 0;
+            line-height: 0;
+        }
+
+        .kick-text {
+            color: var(--kick-verde);
+            font-family: 'Press Start 2P', cursive;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .btn-kick:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--kick-verde);
+        }
+
+        /* --- OTROS BOTONES --- */
+        .btn-facebook {
+            background: #1877F2;
+        }
+
+        .btn-tiktok {
+            background: #000;
+            border: 1px solid #fe2c55;
+            box-shadow: -2px -2px 0px #25f4ee, 2px 2px 0px #fe2c55;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="status">● ONLINE</div>
+        
+        <img src="https://raw.githubusercontent.com/Jocthan-ML/Mi-p-gina-de-stream/main/Yoto%20Logo.png" alt="Yoto GM Logo" class="logo-img">
+        
+        <div class="descripcion">Streamer Gamer / Content Creator</div>
+
+        <a href="https://kick.com/jocthanM" target="_blank" class="boton btn-kick">
+            <div class="k-pixel-logo">K</div>
+            <span class="kick-text">KICK</span>
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=100092795311838" target="_blank" class="boton btn-facebook">
+            <i class="fa-brands fa-facebook"></i> FACEBOOK
+        </a>
+
+        <a href="https://www.tiktok.com/@yoto.gm" target="_blank" class="boton btn-tiktok">
+            <i class="fa-brands fa-tiktok"></i> TIKTOK
+        </a>
+    </div>
+
+</body>
+</html>
