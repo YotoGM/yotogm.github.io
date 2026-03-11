@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoto[G.M] | Hub Digital</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
@@ -21,21 +21,18 @@
 
         /* --- ANIMACIONES --- */
         
-        /* Frase Superior Animada */
         @keyframes flowText {
-            0% { background-position: 0% 50%; transform: translateY(0) scale(1); }
-            50% { background-position: 100% 50%; transform: translateY(-5px) scale(1.05); }
-            100% { background-position: 0% 50%; transform: translateY(0) scale(1); }
+            0% { background-position: 0% 50%; transform: scale(1); filter: drop-shadow(0 0 5px var(--verde)); }
+            50% { background-position: 100% 50%; transform: scale(1.08); filter: drop-shadow(0 0 20px var(--morado)); }
+            100% { background-position: 0% 50%; transform: scale(1); filter: drop-shadow(0 0 5px var(--verde)); }
         }
 
-        /* Estado Online */
         @keyframes pulse {
             0% { opacity: 1; text-shadow: 0 0 8px var(--verde); }
             50% { opacity: 0.4; text-shadow: 0 0 0px var(--verde); }
             100% { opacity: 1; text-shadow: 0 0 8px var(--verde); }
         }
 
-        /* Logo Parpadeo y Respiración */
         @keyframes logo-glow-pulse {
             0%, 100% { filter: drop-shadow(0 0 10px var(--morado)); transform: scale(1); }
             50% { filter: drop-shadow(0 0 25px var(--morado)) brightness(1.2); transform: scale(1.03); }
@@ -49,30 +46,31 @@
             color: white;
             font-family: 'Rajdhani', sans-serif;
             display: flex;
-            flex-direction: column; /* Alineación vertical para la frase arriba */
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
             margin: 0;
+            padding: 40px 0; /* Espacio extra arriba y abajo */
             position: relative;
         }
 
-        /* ESTILO DE LA FRASE SUPERIOR */
+        /* FRASE SUPERIOR POTENCIADA */
         .top-phrase {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 700;
+            font-size: 2.2rem; /* Letras mucho más grandes */
+            font-weight: 900; /* Grosor máximo */
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
+            letter-spacing: 5px;
+            margin-bottom: 40px; /* Más separación de la tarjeta */
+            margin-top: -20px; /* Sube la posición un poco */
             text-align: center;
-            /* Efecto de gradiente animado en el texto */
-            background: linear-gradient(-45deg, var(--verde), var(--morado), var(--verde), var(--morado));
+            background: linear-gradient(-45deg, var(--verde), #ffffff, var(--morado), #ffffff);
             background-size: 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: flowText 4s infinite ease-in-out;
-            filter: drop-shadow(0 0 5px rgba(57, 255, 20, 0.3));
+            animation: flowText 3s infinite ease-in-out;
+            line-height: 1.2;
         }
 
         .page-counter {
@@ -180,14 +178,14 @@
 
         /* Responsive celular */
         @media (max-width: 480px) {
-            .top-phrase { font-size: 1.1rem; padding: 0 20px; }
+            .top-phrase { font-size: 1.5rem; letter-spacing: 2px; }
             .card { width: 85%; }
         }
     </style>
 </head>
 <body>
 
-    <div class="top-phrase">¡Sígueme en Stream!</div>
+    <div class="top-phrase">¡SÍGUEME EN STREAM!</div>
 
     <div class="page-counter">
         <i class="fa-solid fa-eye"></i>
